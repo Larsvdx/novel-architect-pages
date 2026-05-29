@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Privacy & Local Data | Novel Architect</title>
+    <meta
+      name="description"
+      content="Learn how Novel Architect stores writing data locally, supports offline access, and sends selected text temporarily for AI requests."
+    >
+    <link rel="icon" href="assets/icon_final_2.png">
+    <link rel="stylesheet" href="assets/styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <nav class="nav" aria-label="Main navigation">
+        <a class="brand" href="index.html" aria-label="Novel Architect home">
+          <img src="assets/icon_final_2.png" alt="" class="brand-mark">
+          <span>Novel Architect</span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-menu">
+          Menu
+        </button>
+        <div class="nav-links" id="site-menu">
+          <a href="features.html">Features</a>
+          <a href="screenshots.html">Screenshots</a>
+          <a href="privacy.html" aria-current="page">Privacy</a>
+          <a href="download.html">Download</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="page-shell">
+          <p class="eyebrow">Privacy and local data</p>
+          <h1>Your writing data is local by default.</h1>
+          <p>
+            Novel Architect is designed as a desktop app first. The local library remains the center
+            of the workflow, while connected services are used for account and AI features.
+          </p>
+        </div>
+      </section>
+
+      <section class="section section-light">
+        <div class="page-shell privacy-layout">
+          <article class="privacy-block">
+            <h2>What stays local</h2>
+            <p>
+              Books, chapters, chapter versions, context notes, saved reviews, drafts, and app
+              library state are stored in a local SQLite database under the user's home directory.
+            </p>
+            <code>%USERPROFILE%\.novelwriter\novel_writer.db</code>
+          </article>
+          <article class="privacy-block">
+            <h2>What works offline</h2>
+            <p>
+              Cached remote users and local-only users can still work with local books, chapters,
+              context entries, and versions if the backend is unavailable. Backend-only features
+              such as Google login, payments, story points, and AI requests require reconnecting.
+            </p>
+          </article>
+          <article class="privacy-block">
+            <h2>What AI requests send</h2>
+            <p>
+              When you request AI help, the app sends the selected material needed for that task:
+              book details, the book-level AI prompt, chosen context entries, selected previous
+              chapters, the current chapter skeleton, and current draft text.
+            </p>
+          </article>
+          <article class="privacy-block">
+            <h2>Temporary use for AI</h2>
+            <p>
+              Book data is not stored externally as a general library backup by this website. Text
+              selected for an AI job is sent to the backend temporarily to complete that specific
+              request. Completed AI output is saved back into the local desktop app.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section-dark compact">
+        <div class="page-shell split-section">
+          <div>
+            <p class="eyebrow">Writer control</p>
+            <h2>AI output is another version, not the final word.</h2>
+          </div>
+          <p class="section-copy">
+            Generated chapters and revisions are persisted as chapter versions. The author compares,
+            edits, discards, or keeps the result. The product principle remains: AI as a tool, not
+            the author.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-shell footer-inner">
+        <p>Novel Architect. AI as a tool, not the author.</p>
+        <div>
+          <a href="features.html">Features</a>
+          <a href="download.html">Download</a>
+          <a href="https://github.com/Larsvdx/novel-architect-releases/releases/latest">Releases</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>

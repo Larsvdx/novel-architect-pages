@@ -141,7 +141,7 @@ a {
 
 .hero {
   position: relative;
-  min-height: 760px;
+  min-height: 700px;
   overflow: hidden;
   color: var(--soft-white);
   background: var(--midnight);
@@ -174,11 +174,10 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  padding: 128px 0 220px;
+  padding: 104px 0 170px;
 }
 
-.hero-content h1,
-.page-hero h1 {
+.hero-content h1 {
   max-width: 760px;
   margin: 0;
   font-size: clamp(3rem, 7vw, 6.8rem);
@@ -223,6 +222,12 @@ a {
   flex-wrap: wrap;
   gap: 14px;
   margin-top: 34px;
+}
+
+.center-action {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
 }
 
 .button {
@@ -289,11 +294,11 @@ a {
 }
 
 .section {
-  padding: 92px 0;
+  padding: 72px 0;
 }
 
 .section.compact {
-  padding: 68px 0;
+  padding: 56px 0;
 }
 
 .section-light {
@@ -382,6 +387,191 @@ a {
 .feature-grid {
   display: grid;
   gap: 18px;
+}
+
+.workflow-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(300px, 1fr);
+  gap: 52px;
+  align-items: start;
+}
+
+.workflow-intro h2,
+.workflow-step h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.08;
+}
+
+.workflow-intro p,
+.workflow-copy > p {
+  margin: 0;
+  color: var(--muted-ink);
+  font-size: 1.06rem;
+}
+
+.section-dark .workflow-copy > p {
+  color: rgba(244, 246, 251, 0.78);
+}
+
+.workflow-stack {
+  display: grid;
+  gap: 64px;
+}
+
+.workflow-step {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 0.86fr);
+  gap: 46px;
+  align-items: center;
+}
+
+.workflow-step.reverse {
+  direction: rtl;
+}
+
+.workflow-step.reverse > * {
+  direction: ltr;
+}
+
+.workflow-copy {
+  display: grid;
+  gap: 18px;
+}
+
+.workflow-details {
+  display: grid;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.workflow-details div {
+  padding: 16px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-sm);
+  background: rgba(244, 246, 251, 0.06);
+}
+
+.workflow-details h3 {
+  margin: 0 0 4px;
+  color: var(--teal);
+  font-size: 0.95rem;
+}
+
+.workflow-details p {
+  margin: 0;
+  color: rgba(244, 246, 251, 0.74);
+}
+
+.workflow-shot {
+  min-height: 420px;
+  padding: 22px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-lg);
+  background:
+    linear-gradient(180deg, rgba(124, 93, 250, 0.12), rgba(46, 211, 198, 0.06)),
+    var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.shot-title {
+  margin-bottom: 18px;
+  color: var(--soft-white);
+  font-weight: 850;
+  font-size: 1.2rem;
+}
+
+.shot-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+  padding: 14px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-sm);
+  color: rgba(244, 246, 251, 0.78);
+  background: rgba(244, 246, 251, 0.08);
+}
+
+.shot-row.selected {
+  border-color: rgba(124, 93, 250, 0.54);
+  background: rgba(124, 93, 250, 0.2);
+}
+
+.shot-row strong {
+  color: var(--soft-white);
+}
+
+.shot-button {
+  width: 44%;
+  height: 42px;
+  margin: 28px 0 0 auto;
+  border-radius: var(--radius-sm);
+  background: var(--purple);
+}
+
+.revision-shot,
+.reviewer-shot {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+}
+
+.version-column,
+.version-editor,
+.review-list-preview,
+.review-report-preview {
+  padding: 14px;
+  border: 1px solid var(--line-dark);
+  border-radius: var(--radius-sm);
+  background: rgba(11, 16, 33, 0.48);
+}
+
+.version-card,
+.review-list-preview span {
+  display: block;
+  height: 46px;
+  margin-bottom: 12px;
+  border-radius: var(--radius-sm);
+  background: rgba(244, 246, 251, 0.1);
+}
+
+.version-card {
+  padding: 13px 12px;
+  color: rgba(244, 246, 251, 0.76);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.version-card.active,
+.review-list-preview .active {
+  background: rgba(124, 93, 250, 0.3);
+}
+
+.shot-line {
+  width: 76%;
+  height: 14px;
+  margin-bottom: 16px;
+  border-radius: var(--radius-sm);
+  background: rgba(244, 246, 251, 0.13);
+}
+
+.shot-line.wide {
+  width: 96%;
+}
+
+.shot-line.short {
+  width: 48%;
+}
+
+.shot-line.title {
+  width: 58%;
+  height: 26px;
+  margin-bottom: 28px;
+}
+
+.reviewer-shot {
+  grid-template-columns: 130px minmax(0, 1fr);
 }
 
 .feature-grid.three {
@@ -478,15 +668,23 @@ a {
 }
 
 .page-hero {
-  padding: 110px 0 76px;
+  padding: 64px 0 52px;
   color: var(--soft-white);
   background: var(--midnight);
 }
 
+.page-hero h1 {
+  max-width: 940px;
+  margin: 0;
+  font-size: clamp(2.15rem, 4.6vw, 4.35rem);
+  line-height: 1.04;
+  letter-spacing: 0;
+}
+
 .page-hero p {
-  max-width: 720px;
+  max-width: 760px;
   color: rgba(244, 246, 251, 0.78);
-  font-size: 1.12rem;
+  font-size: 1.04rem;
 }
 
 .page-hero a {
@@ -567,6 +765,7 @@ a {
 .asset-list {
   display: grid;
   gap: 12px;
+  margin-top: 18px;
 }
 
 .asset-link {
@@ -574,12 +773,12 @@ a {
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 16px;
   align-items: center;
-  padding: 14px;
+  padding: 18px;
   color: var(--ink);
   text-decoration: none;
   border: 1px solid var(--line-light);
   border-radius: var(--radius-sm);
-  background: #f8f7fc;
+  background: #f7f6fc;
 }
 
 .asset-link:hover,
@@ -591,6 +790,10 @@ a {
 .asset-link strong,
 .asset-link span {
   display: block;
+}
+
+.asset-link strong {
+  margin-bottom: 2px;
 }
 
 .asset-link span {
@@ -1017,7 +1220,7 @@ a {
   }
 
   .hero {
-    min-height: 860px;
+    min-height: 780px;
   }
 
   .hero-stage {
@@ -1043,13 +1246,15 @@ a {
   }
 
   .hero-content {
-    padding-top: 96px;
+    padding-top: 78px;
   }
 
   .split-section,
   .feature-band,
   .cta-band,
   .download-heading,
+  .workflow-intro,
+  .workflow-step,
   .feature-row,
   .privacy-layout,
   .release-layout,
@@ -1074,6 +1279,10 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .workflow-step.reverse {
+    direction: ltr;
+  }
+
   .mini-sidebar.right {
     display: none;
   }
@@ -1091,13 +1300,16 @@ a {
     white-space: nowrap;
   }
 
-  .hero-content h1,
-  .page-hero h1 {
+  .hero-content h1 {
     font-size: clamp(2.55rem, 14vw, 4.4rem);
   }
 
+  .page-hero h1 {
+    font-size: clamp(2rem, 11vw, 3.35rem);
+  }
+
   .section {
-    padding: 68px 0;
+    padding: 54px 0;
   }
 
   .context-type-grid {

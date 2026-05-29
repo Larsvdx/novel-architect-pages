@@ -15,6 +15,7 @@ Static GitHub Pages site for Novel Architect, the desktop writing workspace for 
 
 - `index.html` - homepage with positioning, slogan, CTAs, and core product benefits.
 - `features.html` - detailed feature overview for library, chapters, context, AI, spellcheck, PDF export, and offline access.
+- `ai-workflow.html` - dedicated AI workflow explanation for chapter drafting, revision passes, and editorial reviews.
 - `screenshots.html` - styled placeholder screenshot gallery for app workflows.
 - `privacy.html` - local data, offline access, and AI request data overview.
 - `download.html` - latest-release download page with GitHub release asset integration.
